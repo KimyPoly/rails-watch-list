@@ -1,12 +1,17 @@
+
+
+<div class ="container py-5">
+
 <h1>List</h1>
-<% #url = movie.url %>
-
-  <div class="cards">
-   <% @lists.each do |list| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(url)">
-        <%= link_to list.name, list_path(list)%>
+  <div class="row">
+    <% @lists.each do |list| %>
+      <div class="co-12 col-sm-6 col-md-4 mb-3">
+        <%= link_to list_path(list), class:"text-decoration-none" do %>
+          <div class="card-category" style="width: 20rem; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://picsum.photos/200/300)">
+            <%= list.name %>
+          </div>
+        <% end %>
       </div>
-      <% end %>
+    <% end %>
   </div>
-
-<%= link_to "Add a list", "lists/new" %>
+</div>
