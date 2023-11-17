@@ -1,0 +1,7 @@
+<h2><%= @list.name %></h2>
+  <h3> List </h3>
+  <ul class="list-group">
+    <% @list.bookmarks.each do |bookmark| %>
+      <li class="list-group-item"><%= bookmark.movie.title %></li>
+    <% end %>
+  </ul>
